@@ -1,15 +1,17 @@
 <%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
-<form:form commandName="user">
+<form:form commandName="user" action="greeting">
     <table border="1">
         <tr>
             <td>First Name:</td>
             <td><form:input path="firstName"/></td>
+            <td><form:errors path="firstName"/></td>
         </tr>
         <tr>
             <td>Last Name:</td>
             <td><form:input path="lastName"/></td>
+            <td><form:errors path="lastName"/></td>
         </tr>
         <tr>
             <td>Sex:</td>
