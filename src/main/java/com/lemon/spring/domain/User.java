@@ -12,10 +12,19 @@ package com.lemon.spring.domain;
 public class User {
     private String firstName;
     private String lastName;
+    private String sex;
     private Preferences preferences;
 
     public User(){
         this.preferences = new Preferences();
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
     }
 
     public Preferences getPreferences() {

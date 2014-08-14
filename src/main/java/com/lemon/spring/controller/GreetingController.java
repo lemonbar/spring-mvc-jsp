@@ -28,11 +28,23 @@ public class GreetingController {
         return "login";
     }
 
+    //used for ${interestList} in jsp file.
+    //ModelAttribute means the return value will be added into the model.
     @ModelAttribute("interestList")
     public List<String> getInterests(){
         List<String> result = new ArrayList<String>();
         result.add("III");
         result.add("JJJ");
+        return result;
+    }
+
+    //used for ${sexOptions} in jsp file.
+    //ModelAttribute means the return value will be added into the model.
+    @ModelAttribute("sexOptions")
+    public List<String> getSexList(){
+        List<String> result = new ArrayList<String>();
+        result.add("M");
+        result.add("F");
         return result;
     }
 }

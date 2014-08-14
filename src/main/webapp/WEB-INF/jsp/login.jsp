@@ -12,13 +12,25 @@
             <td><form:input path="lastName"/></td>
         </tr>
         <tr>
+            <td>Sex:</td>
+            <td>
+                <%--items support Array, List or Map.--%>
+                <form:radiobuttons path="sex" items="${sexOptions}"/>
+            </td>
+            <%--<td>--%>
+                <%--Male: <form:radiobutton path="sex" value="M"/><br/>--%>
+                <%--Female: <form:radiobutton path="sex" value="F"/>--%>
+            <%--</td>--%>
+        </tr>
+
+        <tr>
             <td>Subscribe to newsletter?</td>
-            <!--Approach 1: Property is of type java.lang.Property-->
+            <%--Approach 1: Property is of type java.lang.Property--%>
             <td><form:checkbox path="preferences.receiveNewsletter"/></td>
         </tr>
         <tr>
             <td>Interests:</td>
-            <!--Approach 2: Property is of an array or of type java.util.Collection-->
+            <%--Approach 2: Property is of an array or of type java.util.Collection--%>
             <td>
                 <%--Property is of an array or of type java.util.Collection--%>
                 <form:checkboxes path="preferences.interests" items="${interestList}"/>
@@ -31,7 +43,7 @@
         </tr>
         <tr>
             <td>Favourite Words:</td>
-            <!--Approach 3: Property is of type java.lang.Object-->
+            <%--Approach 3: Property is of type java.lang.Object--%>
             <td>
                 Magic: <form:checkbox path="preferences.favouriteWord" value="Magic"/>
             </td>
