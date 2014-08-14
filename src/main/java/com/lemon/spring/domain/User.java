@@ -9,45 +9,18 @@
  */
 package com.lemon.spring.domain;
 
+import lombok.Data;
+
+@Data
 public class User {
     private String firstName;
     private String lastName;
     private String sex;
+    private String password;
     private Preferences preferences;
 
     public User(){
         this.preferences = new Preferences();
     }
 
-    public String getSex() {
-        return sex;
-    }
-
-    public void setSex(String sex) {
-        this.sex = sex;
-    }
-
-    public Preferences getPreferences() {
-        return preferences;
-    }
-
-    public void setPreferences(Preferences preferences) {
-        this.preferences = preferences;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
 }

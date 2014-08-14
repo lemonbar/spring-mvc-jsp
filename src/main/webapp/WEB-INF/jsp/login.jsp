@@ -22,7 +22,13 @@
                 <%--Female: <form:radiobutton path="sex" value="F"/>--%>
             <%--</td>--%>
         </tr>
-
+        <tr>
+            <td>Password:</td>
+            <%--If you want to show password, please set showPassword="true"--%>
+            <td>
+                <form:password path="password"/>
+            </td>
+        </tr>
         <tr>
             <td>Subscribe to newsletter?</td>
             <%--Approach 1: Property is of type java.lang.Property--%>
