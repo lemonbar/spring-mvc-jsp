@@ -1,12 +1,4 @@
-/* 
- * Copyright (c) 2014 General Electric Company. All rights reserved. 
- * 
- * The copyright to the computer software herein is the property of 
- * General Electric Company. The software may be used and/or copied only 
- * with the written permission of General Electric Company or in accordance 
- * with the terms and conditions stipulated in the agreement/contract 
- * under which the software has been supplied. 
- */
+
 package com.lemon.spring.controller;
 
 import com.lemon.spring.domain.User;
@@ -45,6 +37,22 @@ public class GreetingController {
         List<String> result = new ArrayList<String>();
         result.add("M");
         result.add("F");
+        return result;
+    }
+
+    @ModelAttribute("skillList")
+    public List<String> getSkillList(){
+        List<String> result = new ArrayList<String>();
+        result.add("Potions");
+        result.add("Herbology");
+        return result;
+    }
+
+    @ModelAttribute("countryList")
+    public List<String> getCountryList(){
+        List<String> result = new ArrayList<String>();
+        result.add("China");
+        result.add("USA");
         return result;
     }
 }

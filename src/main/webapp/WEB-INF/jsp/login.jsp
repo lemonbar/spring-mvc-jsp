@@ -30,6 +30,39 @@
             </td>
         </tr>
         <tr>
+            <td>Skills:</td>
+            <%--Multiple depends on the field type, if it is String type, single;--%>
+            <td>
+                <form:select path="skills" items="${skillList}"/>
+            </td>
+        </tr>
+        <tr>
+            <td>House:</td>
+            <%--single selection.--%>
+            <td>
+                <form:select path="house">
+                    <form:option value="Beijing"/>
+                    <form:option value="Chengdu"/>
+                    <form:option value="Shandong"/>
+                </form:select>
+            </td>
+        </tr>
+        <tr>
+            <td>Country:</td>
+            <td>
+                <%--can use itemValue and itemLabel refer to bean properties of the item objects.--%>
+                <form:select path="country">
+                    <form:option value="----"/>
+                    <form:options items="${countryList}"/>
+                </form:select>
+            </td>
+        </tr>
+        <tr>
+            <td>Notes:</td>
+            <td><form:textarea path="notes" rows="3" cols="20"/></td>
+            <td><form:errors path="notes"/></td>
+        </tr>
+        <tr>
             <td>Subscribe to newsletter?</td>
             <%--Approach 1: Property is of type java.lang.Property--%>
             <td><form:checkbox path="preferences.receiveNewsletter"/></td>
@@ -59,5 +92,6 @@
                 <input type="submit" value="login"/>
             </td>
         </tr>
+        <form:hidden path="displayNone"/>
     </table>
 </form:form>
